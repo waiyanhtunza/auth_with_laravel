@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -15,9 +16,13 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        
-        return view('dashboard',['user'=>$user]);
+       
+        $user = auth()->user();
+        $posts = Post::query()->where('user_id',$user->id)->get();
+        return view('dashboard',[
+            'posts'=>$posts,
+            'user' =>$user
+        ],);
     }
 
     public function login()

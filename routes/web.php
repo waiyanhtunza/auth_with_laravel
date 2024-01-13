@@ -28,10 +28,12 @@ Route::get('/login',[UserController::class,'login'])->name('auth_layouts.login')
 Route::post('/',[UserController::class,'check'])->name('auth_layouts.check');
 Route::post('/login',[UserController::class,'destroy'])->name('dashboard.logout');
 
+
 //post route
 
 Route::get('/',[PostController::class,'index'])->name('main');
-Route::get('/posts/create',[PostController::class,'create'])->name('posts.create');
+Route::get('/dashboard/posts/create',[PostController::class,'create'])->name('posts.create');
 Route::post('/posts',[PostController::class,'store'])->name('posts.store');
 
+ 
 

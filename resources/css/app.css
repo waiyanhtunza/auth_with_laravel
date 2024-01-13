@@ -17,21 +17,10 @@
     opacity: 0;
     transition: .6s ease;
     background-color: #707b7e;
+    border-radius: 4px;
   }
   
   .container:hover .overlay {
-    opacity: 0.8;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+    opacity: 0.9;
   }
   

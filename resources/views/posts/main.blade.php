@@ -12,19 +12,31 @@
 </head>
 <body>
 
+    
     @section('content')
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 m-4">
-        <div class="grid gap-4">
-            <div class="container">
-                <img class="h-auto max-w-full rounded-lg image" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
-                <div class="overlay">
-                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae ab animi dolorem necessitatibus blanditiis laboriosam laudantium, ducimus dolore quos error libero maiores cupiditate voluptatibus? Nam culpa eligendi dignissimos adipisci!</div>
-                  </div>
-            </div>
-        </div>
-        
-        
+            @foreach ($posts as $post)
+            <div class="container rounded-lg">
+                <img class="h-full max-w-full rounded-lg" src="{{ asset('images/'. $post->image) }}" alt="">
+                <div class="overlay flex flex-col justify-center items-center text-center">
+                    <div class="text-lg capitalize text-gray-900">{{$post->title}}</div>
+                    <div class="text-sm italic capitalize p-10 text-black hover:underline text-center">
+                        <form action="{{route('posts.detail')}}" method="get">
 
+                            @csrf
+                            @method('get')
+                            <button type="submit" class="hover:underline">
+                                {{Str::limit($post->description, 100)}}
+                            </button>
+                           
+                        </form>
+                     
+                    </div>
+                    <div class="text-sm text-gray-900 "><span class="italic">Author=></span><strong>{{$post->user->name}}</strong></div>
+                </div>
+            </div>
+            @endforeach
+       
     </div>
     @endsection
     
