@@ -27,8 +27,6 @@
             
         </h2>
       </div>
-  
-  
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form class="space-y-6" action="{{route('auth_layouts.register')}}" method="POST">
 
