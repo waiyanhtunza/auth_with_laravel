@@ -34,6 +34,7 @@ Route::post('/login',[UserController::class,'destroy'])->name('dashboard.logout'
 Route::get('/',[PostController::class,'index'])->name('main');
 Route::get('/dashboard/posts/create',[PostController::class,'create'])->name('posts.create');
 Route::post('/posts',[PostController::class,'store'])->name('posts.store');
+Route::get('/posts/{id}/detail',[PostController::class,'show'])->name('posts.show');
 
  
 

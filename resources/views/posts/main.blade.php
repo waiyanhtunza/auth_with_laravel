@@ -21,15 +21,13 @@
                 <div class="overlay flex flex-col justify-center items-center text-center">
                     <div class="text-lg capitalize text-gray-900">{{$post->title}}</div>
                     <div class="text-sm italic capitalize p-10 text-black hover:underline text-center">
-                        <form action="{{route('posts.detail')}}" method="get">
-
-                            @csrf
-                            @method('get')
-                            <button type="submit" class="hover:underline">
+                        
+                            
+                            <a href="{{route('posts.show',['id'=>$post->id])}}" class="hover:underline">
                                 {{Str::limit($post->description, 100)}}
-                            </button>
+                            </a>
                            
-                        </form>
+                        
                      
                     </div>
                     <div class="text-sm text-gray-900 "><span class="italic">Author=></span><strong>{{$post->user->name}}</strong></div>
