@@ -40,6 +40,14 @@
                 </a>
                 
               </div>
+              <div>
+                <form action="{{route('posts.delete',['id'=>$post->id])}}" method="post">
+                  @csrf
+                  @method('delete')
+                  <button type="submit" class="bg-red-400">Delete</button>
+                </form>
+               
+              </div>
             </div>
           @endforeach
         

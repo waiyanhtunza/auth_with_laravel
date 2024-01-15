@@ -29,6 +29,12 @@
                             {{$posts->user->name}}
                         </a>
                     </p>
+                    <p class="text-gray-700 text-xs mt-2">Written Date:
+                        <a href="#"
+                            class="text-indigo-600 font-medium hover:text-gray-900 transition duration-500 ease-in-out">
+                            {{$posts->created_at}}
+                        </a>
+                    </p>
     
                     <p class="text-base leading-8 my-5">
                         {{$posts->description}}
