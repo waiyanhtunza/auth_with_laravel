@@ -12,8 +12,8 @@
 <body>
     @section('content')
     <div class="max-w-screen-xl mx-auto p-5 sm:p-8 md:p-12 relative">
-        <div class="rounded-3xl h-96 text-center overflow-hidden">
-            <img src="{{ asset('images/'. $posts->image) }}" alt="">
+        <div class=" text-center overflow-hidden">
+            <img src="{{ asset('images/'. $posts->image) }}" alt="" class="mx-auto h-96 rounded-lg ">
         </div>
         <div class="max-w-2xl mx-auto">
             <div

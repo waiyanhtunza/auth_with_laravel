@@ -35,7 +35,7 @@
           <div class="my-4">
               <div class="font-bold text-lg">{{$post->title}}</div>
               <div>
-                <a href="" class="hover:underline" >
+                <a href="{{route('posts.edit',['id'=>$post->id])}}" class="hover:underline" >
                   {{Str::limit($post->description, 100)}}
                 </a>
                 
