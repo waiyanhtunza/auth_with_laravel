@@ -35,7 +35,7 @@
           <div class="my-4">
               <div class="font-bold text-lg">{{$post->title}}</div>
               <div>
-                <a href="" class="">
+                <a href="" class="hover:underline" >
                   {{Str::limit($post->description, 100)}}
                 </a>
                 

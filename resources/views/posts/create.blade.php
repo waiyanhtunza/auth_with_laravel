@@ -33,7 +33,7 @@
         <!-- buttons -->
         <div class="buttons flex justify-end my-4">
             
-                <a href="{{route('main')}}">
+                <a href="{{route('dashboard')}}">
                     <div class="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer text-gray-500 ml-auto">Cancel</div>
                 </a>
            
