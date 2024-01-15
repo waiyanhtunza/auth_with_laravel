@@ -16,7 +16,7 @@
     <style>
     body {background:white !important;}
     </style>
-     <form action="{{route('posts.store')}}" method="post" enctype="multipart/form-data">
+     <form action="{{route('dashboard')}}" method="post" enctype="multipart/form-data">
         @csrf
         @method('post')
     <div class="editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl">
